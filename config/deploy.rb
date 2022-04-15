@@ -1,10 +1,10 @@
 # Change these
-server '54.147.74.130', port: 22, roles: [:web, :app, :db], primary: true
+server '3.110.92.33', port: 22, roles: [:web, :app, :db], primary: true
 
-set :repo_url,'git@github.com:dwivedivaibs/aws-school.git'
-set :application,     'aws-school'
+set :repo_url,'git@github.com:dwivedivaibs/pmic-school.git'
+set :application,     'pmic-school'
 set :user,            'ubuntu'
-set :branch,          'main'
+set :branch,          'master'
 set :puma_threads,    [4, 16]
 set :puma_workers,    0
 
@@ -51,8 +51,8 @@ namespace :deploy do
   desc "Make sure local git is in sync with remote."
   task :check_revision do
     on roles(:app) do
-      unless `git rev-parse HEAD` == `git rev-parse origin/main`
-        puts "WARNING: HEAD is not the same as origin/main"
+      unless `git rev-parse HEAD` == `git rev-parse origin/master`
+        puts "WARNING: HEAD is not the same as origin/master"
         puts "Run `git push` to sync changes."
         exit
       end
