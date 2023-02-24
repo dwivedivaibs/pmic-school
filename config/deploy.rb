@@ -1,5 +1,5 @@
 # Change these
-server '3.93.189.160', port: 22, roles: [:web, :app, :db], primary: true
+server '54.196.138.203', port: 22, roles: [:web, :app, :db], primary: true
 
 set :repo_url,'git@github.com:dwivedivaibs/pmic-school.git'
 set :application,     'pmic-school'
